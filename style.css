@@ -3,8 +3,7 @@
 }
 .grid-container {
     width: fit-content;
-    border: 5px solid rgb(32, 147, 255);
-    background-color: rgb(115, 187, 255);
+    background-color: rgb(176, 217, 255);
     padding: 20px;
     display: grid;
     grid-gap: 10px;
@@ -12,18 +11,20 @@
     grid-template-rows: repeat(7, 70px);
     justify-content: center;
     grid-auto-flow: row;
+    border-radius: 10px;
 }
 .button {
-    border: 5px solid black;
     font-size: 35px;
     display: grid;
     justify-content: center;
     align-items: center;    
+    border-radius: 10px;
 }
 .grid-display {
     background-color: green;
     grid-column: span 4;
     grid-row: span 2;
+    border-radius: 10px;
 }
 .calculator-container{
     height: 100vh;
@@ -32,5 +33,11 @@
     justify-content: center;
 }
 .button{
-    background-color: rgb(32, 147, 255);
+    background-color: rgb(117, 186, 250);
+}
+.button:hover{
+    background-color: rgb(82, 162, 236);
+}
+#mouseDown{
+    background-color: rgb(4, 86, 163);
 }
