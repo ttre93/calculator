@@ -1,23 +1,30 @@
-//document.querySelector(".button").forEach(item => item.addEventListener("click", event => {}))
-
-let grd = document.querySelector(".grid-container");
-//grd.addEventListener("click", changeColor);
-
-function changeColor(e){
-    if(e.target.style.backgroundColor === "black"){
-        e.target.style.backgroundColor = "yellow";
-        return;
-    }
-    e.target.style.backgroundColor = "black";
-}
-
 let btns = document.querySelectorAll(".button");
-btns.forEach(btn => btn.addEventListener("mousedown", mouseDown));
-btns.forEach(btn => btn.addEventListener("mouseup", mouseUp));
+let numberBtns = document.querySelectorAll(".numberBtn");
+let displayText = document.querySelector(".display");
+let delBtn = document.querySelector(".deleteAll");
 
-function mouseDown(e){
+btns.forEach(btn => btn.addEventListener("mousedown", btnMouseDown));
+btns.forEach(btn => btn.addEventListener("mouseup", btnMouseUp));
+numberBtns.forEach(btn => btn.addEventListener("click", numberBtnClicked));
+delBtn.addEventListener("click", deleteAll);
+
+function btnMouseDown(e){
     e.target.setAttribute("id", "mouseDown");
 }
-function mouseUp(e){
+function btnMouseUp(e){
     e.target.removeAttribute("id");
 }
+function numberBtnClicked(e){
+    let number = e.target.textContent;
+    console.log(number);
+    displayText.textContent += number;
+}
+function deleteAll(){
+    displayText.textContent = "";
+}
+
+// budu mit prvni a druhou value, kliknutim plus minus atd se
+// vyhodnoti ty dve value do jedne, ulozi se mi to +-*/
+// a zacnu psat druhou value.. pak zas muzu kliknout treba =
+// a vyhodnoti se to a ulozi
+// max delka hodnoty... ???

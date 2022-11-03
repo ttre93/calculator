@@ -1,5 +1,6 @@
 *{
     user-select: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .grid-container {
     width: fit-content;
@@ -25,12 +26,15 @@
     grid-column: span 4;
     grid-row: span 2;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .calculator-container{
     height: 100vh;
-    display: grid;
     align-items: center;
     justify-content: center;
+    display: grid;
 }
 .button{
     background-color: rgb(117, 186, 250);
@@ -40,4 +44,13 @@
 }
 #mouseDown{
     background-color: rgb(4, 86, 163);
+}
+.display{
+    margin: 20px;
+    font-size: 50px;
+    font-weight: 700;
+    /* breaking the text */
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
 }
